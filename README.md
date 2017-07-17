@@ -34,11 +34,17 @@
 	
 ## Difference between Kalman Filters: <a name="difference"></a>
 
-	Kalman filters have the same mains steps: 1. Initialization, 2. Prediction, 3. Update. The Prediction and Update processes can be linear and non-linear.  A Standard Kalman Filter (KF) can be used when the process is linear but when it is not there are two options: Extended and Unscented Kalman Filters.  Extended Kalman Filter uses the Jacobian matrix to linearize non-linear functions; Unscented Kalman Filter, on the other hand, does not need to linearize non-linear functions, instead, the Unscented Kalman Filter maps representative points from a Gaussian distribution.
+	Kalman filters have the same mains steps: 1. Initialization, 2. Prediction, 3. Update. 
+	The Prediction and Update processes can be linear and non-linear.  A Standard Kalman Filter (KF) 
+	can be used when the process is linear but when it is not there are two options: Extended and 
+	Unscented Kalman Filters.  Extended Kalman Filter uses the Jacobian matrix to linearize non-linear 
+	functions; Unscented Kalman Filter, on the other hand, does not need to linearize non-linear functions, 
+	instead, the Unscented Kalman Filter maps representative points from a Gaussian distribution.
 	
 ## Unscented vs Extended Kalman Filter: <a name="vs"></a>
 
-	Table 1: Accuracy comparison in RMSE by using EKF and UKF with both lidar and radar measurements. The lidar and radar measurements are included in the txt file under the data folder.
+	Table 1: Accuracy comparison in RMSE by using EKF and UKF with both lidar and radar measurements. 
+	The lidar and radar measurements are included in the txt file under the data folder.
 
 |            state        |  UKF          |    EKF     |
 |:-----------------------:|:-------------:|:----------:|
@@ -50,11 +56,14 @@
 	Results from table1 indicates that UKF provide better results.
 	
 ## Code: <a name="code"></a>
-	main.cpp: Parse input file and generate outputfiles. Also, coordinates initialization, prediction, update, and rmse calculations.
+	main.cpp: Parse input file and generate outputfiles. Also, coordinates initialization, prediction, 
+	update, and rmse calculations.
 	ukf.cpp: Initialization, Prediction, and Update stages were implemented here.
-	tools.cpp: RMSE calculation was implemented here.	
+	tools.cpp: RMSE calculation was implemented here.
+	nscentedKalmanVisualization.py: Visualize output data.
 	
 ## Discussion: <a name="discussion"></a>
 
-	There can be couple of improvement areas: 1- Implemenentation of code can be more efficient. 2- Finding out optimal parameters that would give the best result.
+	There can be couple of improvement areas: 1- Implemenentation of code can be more efficient. 
+	2- Finding out optimal parameters that would give the best result.
 	
